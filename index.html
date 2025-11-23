@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acceso con contraseña</title>
+</head>
+<body>
+  <h2>Introduce la contraseña:</h2>
+  <input type="password" id="pass">
+  <button onclick="checkPass()">Entrar</button>
+  <p id="msg" style="color:red;"></p>
+
+  <script>
+    function checkPass() {
+      var password = document.getElementById("pass").value;
+      if(password === "MI_CONTRASEÑA") {
+        window.location.href = "https://tu-enlace.com"; // Cambia aquí
+      } else {
+        document.getElementById("msg").innerText = "Contraseña equivocada";
+      }
+    }
+  </script>
+</body>
+</html>
